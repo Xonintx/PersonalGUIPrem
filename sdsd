@@ -1,0 +1,515 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Personal GUI Premium", Red)
+local colors = {    SchemeColor = Color3.fromRGB(255,255,0),    Background = Color3.fromRGB(0, 0, 0),    Header = Color3.fromRGB(0, 0, 0),    TextColor = Color3.fromRGB(255,255,255),    ElementColor = Color3.fromRGB(20, 20, 20)}
+
+local Main = Window:NewTab("GUIS")
+    local Section = Main:NewSection("GUIS")
+
+Section:NewButton("Old SwagMode", "INFO", function()
+        print("Clicked")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/OldSwagmode'))()
+    end)
+
+Section:NewButton("Faded", "Faded", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+    end)
+
+Section:NewButton("SwagMode", "Swagmode", function()
+        print("Clicked")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+    end)
+
+Section:NewButton("Destiny X", "Abre el Destiny X (Se necesita estar en grupo)", function()
+        print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))()
+    end)
+    
+    Section:NewButton("$MOKE", "Abre el $MOKE", function()
+        print("Clicked")
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Biteyz/Smoke/main/source')))()
+    end)
+    
+    Section:NewButton("RayCodex", "Abre el raycodex", function()
+        print("Clicked")
+        loadstring(game:GetObjects("rbxassetid://5812737894")[1].Source)()
+    end)
+
+	Section:NewButton("RayX", "(Group needed)", function()
+        print("Clicked")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/urmomugly/lua-project/main/Script%26/RAYXV001'))()
+    end)
+
+    local Main = Window:NewTab("Player")
+    local Section = Main:NewSection("Player")
+
+Section:NewButton("Titan", "INFO", function()
+        print("Clicked")
+        --[[
+Credits to Lu/Swagmode Owner for making this
+discord.gg/swaggest
+discord.gg/fadeds
+Note from nighter, dont get scammed lol
+To whoever is selling this, ur fr a retard and a skid
+Must have 70% strength for it to work
+]]
+
+function Main(Delay)
+    local H = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA('Humanoid')
+    local function DeleteOriginal()
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+            if v.Name == 'OriginalSize' then
+                v:Destroy()
+            end
+            if v.Name == 'OriginalPosition' then 
+                v:Destroy()
+            end
+        end
+    end
+    local function Width()
+        wait(Delay)
+        DeleteOriginal()
+        H:FindFirstChild("BodyWidthScale"):Destroy()
+    end
+    local function Depth()
+        wait(Delay)
+        DeleteOriginal()
+        H:FindFirstChild("BodyDepthScale"):Destroy()
+    end
+    local function Head()
+        wait(Delay)
+        DeleteOriginal()
+        H:FindFirstChild("HeadScale"):Destroy()
+    end
+    local function Type()
+        wait(Delay)
+        DeleteOriginal()
+        H:FindFirstChild("BodyTypeScale"):Destroy()  
+    end 
+    --// Rearrage these below to customize titan
+    Head()
+    Type()
+    Width()
+    Depth()
+    
+    
+    --\\
+end
+
+Main(.8)
+
+--[[
+     Patterns
+        --\\ Tall and Skinny
+            --// Width, Depth, Head, Type
+        --\\ Tall and Skinny x2
+            --// Width, Depth, Type, Head
+        --\\ Forward Long
+            --// Width, Head, Depth, Type
+        --\\ Forward Long x2
+            --// Width, Head, Type, Depth
+        --\\ Really Forward Long
+            --// Width, Type, Head, Depth
+        --\\ Forward Long x3
+            --// Width, Type, Depth, Head
+            
+        --\\ Tall, Wide + Thin
+            --// Depth, Width, Type, Head
+        --\\ Tall, Wide + Thin x2
+            --// Depth, Width, Head, Type
+        --\\ Tall, Wide + Thinner
+            --// Depth, Head, Width, Type
+        --\\ Really Wide and Thin
+            --// Depth, Head, Type, Width
+        --\\ Really Wide and Thin x2
+            --// Depth, Type, Head, Width
+        --\\ Tall, Wide and Thin x3
+            --// Depth, Type, Width, Head
+            
+        --\\ Tall, Wide and slightly less thin
+            --// Type, Depth, Width, Head
+        --\\ Really tall and wide slightly less thin
+            --// Type, Depth, Head, Width
+        --\\ Really tall, wide and thicc
+            --// Type, Head, Depth, Width
+        --\\  Huge with tiny head 
+            --// Type, Head, Width, Depth
+        --\\ Forward Long x4
+            --// Type, Width, Head, Depth
+        --\\ Tall, slightly longer
+            --// Type, Width, Depth, Head
+            
+        --\\ Pretty big
+            --// Head, Type, Width, Depth
+        --\\ Really Wide and thicc x2
+            --// Head, Type, Depth, Width
+        --\\ Tall, Wide + Thin x3
+            --// Head, Depth, Type, Width
+        --\\ Not too wide but thin
+            --// Head, Depth, Width, Type
+        --\\ Tall slightly forward long
+            --// Head, Width, Depth, Type
+        --\\ Forward long
+            --// Head, Width, Type, Depth
+    
+--]]
+    end)
+
+Section:NewButton("INF Jump", "Inf Jump", function()
+        print("Clicked")
+        local jp = Vector3.new(0, 2500, 0)
+	local a = Instance.new("BodyForce")
+	a.Parent = plr.Character.HumanoidRootPart
+	a.Force = jp
+    end)
+
+Section:NewButton("Get Tools", "INFO", function()
+        print("Clicked")
+        		char = game:GetService('Players').LocalPlayer.Character
+		-------------------------------------
+		function GetKnife()
+			wait(.1)
+			char.HumanoidRootPart.CFrame = CFrame.new(-680.2, 19.75, -254.97)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-115.495, 19.756, -453.45)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-418.208, 19.25, -748.694)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-418.208, 19.25, -748.694)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(33, 19.75, -184.6)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(243.495, 62, -450.5)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-103.53, 19.75, -220.21)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-581.775, 19.7549, -485.23)
+			wait()
+			char.HumanoidRootPart.CFrame = CFrame.new(-399.655, 19.7552, -461.55)
+			wait()
+		end
+ 
+		wait()
+		local X = char.HumanoidRootPart.CFrame.X
+		local Y = char.HumanoidRootPart.CFrame.Y
+		local Z = char.HumanoidRootPart.CFrame.Z
+		GetKnife()
+		repeat GetKnife() until plr.Backpack:FindFirstChild('[Knife]') and plr.Backpack:FindFirstChild('[LockPicker]')
+		char.HumanoidRootPart.CFrame = CFrame.new(X,Y+5,Z)
+    end)
+
+Section:NewButton("AntiStomp", "INFO", function()
+        print("Clicked")
+        pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)
+
+    end)
+
+Section:NewButton("Q TP", "Q TP", function()
+        print("Clicked")
+        plr = game.Players.LocalPlayer
+ 
+hum = plr.Character.HumanoidRootPart
+ 
+mouse = plr:GetMouse()
+ 
+ 
+ 
+mouse.KeyDown:connect(function(key)
+ 
+if key == "q" then
+ 
+if mouse.Target then
+ 
+hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+ 
+end
+ 
+end
+end)
+    end)
+
+Section:NewButton("Speed + Jump", "Speed + Jump", function()
+        print("Clicked")
+        local lp = game:GetService"Players".LocalPlayer
+local SuperSpeed = Instance.new("IntValue",lp.Character.BodyEffects.Movement);SuperSpeed.Name = "SuperSpeed"
+local HulkJump = Instance.new("IntValue",lp.Character.BodyEffects.Movement);HulkJump.Name = "HulkJump"
+    end)
+
+Section:NewButton("Fly", "Fly", function()
+        print("Clicked")
+        local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+ 
+        localplayer = plr
+       
+        if workspace:FindFirstChild("Core") then
+            workspace.Core:Destroy()
+        end
+       
+        local Core = Instance.new("Part")
+        Core.Name = "Core"
+        Core.Size = Vector3.new(0.05, 0.05, 0.05)
+ 
+        spawn(function()
+            Core.Parent = workspace
+            local Weld = Instance.new("Weld", Core)
+            Weld.Part0 = Core
+            Weld.Part1 = localplayer.Character.LowerTorso
+            Weld.C0 = CFrame.new(0, 0, 0)
+        end)
+       
+        workspace:WaitForChild("Core")
+       
+        local torso = workspace.Core
+        flying = true
+        local speed=10
+        local keys={a=false,d=false,w=false,s=false}
+        local e1
+        local e2
+        local function start()
+            local pos = Instance.new("BodyPosition",torso)
+            local gyro = Instance.new("BodyGyro",torso)
+            pos.Name="EPIXPOS"
+            pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+            pos.position = torso.Position
+            gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+            gyro.cframe = torso.CFrame
+            repeat
+                wait()
+                localplayer.Character.Humanoid.PlatformStand=true
+                local new=gyro.cframe - gyro.cframe.p + pos.position
+                if not keys.w and not keys.s and not keys.a and not keys.d then
+                    speed=5
+                end
+                if keys.w then
+                    new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                    speed=speed+0
+                end
+                if keys.s then
+                    new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                    speed=speed+0
+                end
+                if keys.d then
+                    new = new * CFrame.new(speed,0,0)
+                    speed=speed+0
+                end
+                if keys.a then
+                    new = new * CFrame.new(-speed,0,0)
+                    speed=speed+0
+                end
+                if speed>10 then
+                    speed=5
+                end
+                pos.position=new.p
+                if keys.w then
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+                elseif keys.s then
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+                else
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+                end
+            until flying == false
+            if gyro then gyro:Destroy() end
+            if pos then pos:Destroy() end
+            flying=false
+            localplayer.Character.Humanoid.PlatformStand=false
+            speed=10
+        end
+        e1=mouse.KeyDown:connect(function(key)
+            if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+            if key=="w" then
+                keys.w=true
+            elseif key=="s" then
+                keys.s=true
+            elseif key=="a" then
+                keys.a=true
+            elseif key=="d" then
+                keys.d=true
+            elseif key=="x" then
+                if flying==true then
+                    flying=false
+                else
+                    flying=true
+                    start()
+                end
+            end
+        end)
+        e2=mouse.KeyUp:connect(function(key)
+            if key=="w" then
+                keys.w=false
+            elseif key=="s" then
+                keys.s=false
+            elseif key=="a" then
+                keys.a=false
+            elseif key=="d" then
+                keys.d=false
+            end
+        end)
+        start()
+    end)
+
+Section:NewButton("HeroFly", "SwagMode", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/swag/main/admin_fly"))()
+    end)
+
+Section:NewButton("Noclip", "NoClip", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://pastebin.com/raw/qN8c79hy"))()
+    end)
+
+    local Main = Window:NewTab("Main")
+    local Section = Main:NewSection("Main")
+
+Section:NewButton("Crash", "INFO", function()
+        print("Clicked")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+    end)
+
+Section:NewButton("Aimbot", "INFO", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/racemodex/my-scripts/master/dahoodaimlock", true))()
+    end)
+
+Section:NewButton("Aimlock", "INFO", function()
+        print("Clicked")
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Xonintx/The-Ware/main/TheWare')))()
+    end)
+
+Section:NewButton("AutoDrop", "INFO", function()
+        print("Clicked")
+        loadstring(game:HttpGet(("githubusercontenthttps://raw..com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
+    end)
+
+    Section:NewButton(".Login", "Abre un spy", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://pastebin.com/raw/jMkNB4K3", true))()
+    end)
+
+Section:NewButton("KittansCrack", "Cracked", function()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Kitt Cracked";
+            Text = "Loaded.";
+            Duration = "10";
+            })
+            wait(1)
+            game.StarterGui:SetCore("SendNotification", {
+            Title = "Kitt Cracked";
+            Text = "Activado";
+            Duration = "10";
+            })
+        
+                print("Clicked")
+                -- // Services
+            local Players = game:GetService("Players")
+        
+            -- // Vars
+            local LocalPlayer = Players.LocalPlayer
+            local accomidationfactor = 0.165
+        
+            -- // Silent Aim Module
+            local SilentAim = loadstring(game:HttpGet("https://pastebin.com/raw/2f0mGbMP"))()
+            SilentAim.TeamCheck = false
+        
+            -- // Metatable vars
+            local mt = getrawmetatable(game)
+            local backupindex = mt.__index
+            setreadonly(mt, false)
+        
+            -- // Check if player is down
+            SilentAim.checkSilentAim = function()
+                local checkA = (SilentAim.SilentAimEnabled == true and SilentAim.Selected ~= LocalPlayer)
+                local playerCharacter = SilentAim.Selected.Character
+                local daHood = (playerCharacter.BodyEffects["K.O"].Value == false or playerCharacter:FindFirstChild("GRABBING_CONSTRAINT") ~= nil)
+        
+                return (checkA and daHood)
+            end
+        
+            -- // Hook
+            mt.__index = newcclosure(function(t, k)
+                if (t:IsA("Mouse") and (k == "Hit")) then
+                    print(t, k)
+                    local CPlayer = SilentAim.Selected
+                    if (SilentAim.checkSilentAim()) then
+                        if (CPlayer.Character:FindFirstChild("Head")) then
+                            return {p=(CPlayer.Character.Head.CFrame.p+(CPlayer.Character.Head.Velocity*accomidationfactor))}
+                        end
+                    end
+                end
+                return backupindex(t, k)
+            end)
+        
+            -- // Revert
+            setreadonly(mt, true)
+    end)
+
+    Section:NewButton("Auto Farm", "(Group needed)", function()
+        print("Clicked")
+        loadstring(game:HttpGet("https://pastebin.com/raw/74VJ07iY", true))()
+    end)
+
+    local Main = Window:NewTab("TP")
+    local Section = Main:NewSection("TP")
+
+Section:NewButton("Bat + Silencer", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82.86, 22.244, -291.56)
+    end)
+
+Section:NewButton("Admin Base", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-729.895, -37.642, -885.8)
+    end)
+
+Section:NewButton("Bank", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-485.668, 23.631, -285.169)
+    end)
+
+Section:NewButton("Boxing", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-236.006, 23.151, -1120.531)
+    end)
+
+Section:NewButton("Gun Shop", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-582, 7.172, -739.015)
+    end)
+
+Section:NewButton("Fitness", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.795, 23.701, -633.72)
+    end)
+
+Section:NewButton("UFO", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71.565, 142.926, -690.33)
+    end)
+
+Section:NewButton("Prision", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-294.162, 22.644, -111.716)
+    end)
+
+Section:NewButton("Phone shop", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-120.121, 22.946, -870.425)
+    end)
+
+Section:NewButton("Mask Shop", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210.255, 21.674, -823.16)
+    end)
+
+Section:NewButton("Alcantarillas", "INFO", function()
+        print("Clicked")
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(112.622, -26.212, -277.321)
+    end)
+
+    -- Credit
+    local Main = Window:NewTab("Config")
+    local Section = Main:NewSection("Creador: IceBearg")
+
+    Section:NewKeybind("KeybindText", "Toca La V si quieres cambiar", Enum.KeyCode.V, function()
+        Library:ToggleUI()
+    end)
